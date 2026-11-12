@@ -1,0 +1,21 @@
+{
+  "name": "codrxs-coding-academy",
+  "version": "1.0.0",
+  "description": "Codrxs Medical Coding Academy - End to End Medical Coding Training, Placement, and Candidate Lead Management Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "medical-coding",
+    "training",
+    "healthcare",
+    "placement"
+  ],
+  "author": "Codrxs Academy",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "pg": "^8.23.1"
+  }
+}

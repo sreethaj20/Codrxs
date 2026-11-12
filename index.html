@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="logo.png?v=2">
+  <link rel="shortcut icon" href="logo.png?v=2">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codrxs Coding Academy | End-to-End Medical Coding Training & Placement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <img src="logo.png" alt="Codrxs Logo" class="brand-logo-img">
+      </a>
+      <nav class="nav-links">
+        <a href="#curriculum">2-Week Syllabus</a>
+        <a href="#features">Program Features</a>
+        <a href="#live-charts">Live Chart Training</a>
+        <a href="#career-support">Career & Placement</a>
+        
+      </nav>
+      <div class="nav-actions">
+        <a href="#register" class="btn btn-primary">Enroll Now</a>
+      </div>
+      <button class="mobile-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="badge-pill">
+          <span class="pulse-dot"></span> Intensive 2-Week Web Training Program
+        </div>
+        <h1 class="hero-title">
+          Master Complete <span class="gradient-text">End-to-End Medical Coding</span> & Launch Your Healthcare Career
+        </h1>
+        <p class="hero-subtitle">
+          Accelerate from beginner to industry-certified professional. Gain hands-on experience with real-world live charts, personalized resume optimization, intensive mock interview drilling, and guaranteed placement assistance into leading healthcare organizations.
+        </p>
+
+        <!-- Highlights Grid -->
+        <div class="hero-highlights">
+          <div class="hl-item">
+            <i class="fa-solid fa-calendar-check"></i>
+            <div>
+              <strong>2-Week Fast-Track</strong>
+              <span>Intensive & outcome-driven</span>
+            </div>
+          </div>
+          <div class="hl-item">
+            <i class="fa-solid fa-globe"></i>
+            <div>
+              <strong>100% Web Based</strong>
+              <span>Live instructor-led sessions</span>
+            </div>
+          </div>
+          <div class="hl-item">
+            <i class="fa-solid fa-notes-medical"></i>
+            <div>
+              <strong>Live Chart Practicum</strong>
+              <span>EMR/EHR actual clinical audits</span>
+            </div>
+          </div>
+          <div class="hl-item">
+            <i class="fa-solid fa-building-user"></i>
+            <div>
+              <strong>Placement Support</strong>
+              <span>Hiring partner tie-ups</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="#register" class="btn btn-primary btn-lg">
+            <span>Register Candidate Interest</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#curriculum" class="btn btn-secondary btn-lg">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Explore 2-Week Roadmap</span>
+          </a>
+        </div>
+
+        </div>
+      <!-- Quick Application Card right in hero -->
+      <div class="hero-card-wrapper">
+        <div class="glass-form-card">
+          <div class="form-header">
+            <h3>Express Interest Form</h3>
+            <p>Fill out your details to secure your batch seat & get curriculum brochure.</p>
+          </div>
+          <form id="heroExpressForm" onsubmit="event.preventDefault(); document.getElementById('register').scrollIntoView({behavior: 'smooth'});">
+            <div class="form-group-mini">
+              <label>Full Name</label>
+              <input type="text" id="quickName" placeholder="Your full name" required>
+            </div>
+            <div class="form-group-mini">
+              <label>Phone Number</label>
+              <input type="tel" id="quickPhone" placeholder="Your contact number" required>
+            </div>
+            <div class="form-group-mini">
+              <label>Preferred Batch</label>
+              <select id="quickBatch">
+                <option value="upcoming-weekday">Upcoming Weekday (2 Weeks - Mon to Fri)</option>
+                <option value="upcoming-weekend">Fast-Track Weekend Intensive</option>
+                <option value="immediate">Immediate Next Batch</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Proceed to Full Application <i class="fa-solid fa-arrow-down"></i>
+            </button>
+            <p class="form-micro-text"><i class="fa-solid fa-shield-halved"></i> 100% confidential. No spam guaranteed.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Pillar Features -->
+  <section id="features" class="section bg-light">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="sub-badge">Why Codrxs Academy?</span>
+        <h2>Engineered for Job-Ready Competence in Just 14 Days</h2>
+        <p>Unlike generic recorded courses, our web-based ecosystem pairs you with master coders, audited clinical charts, and dedicated career coaches.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="icon-box color-blue">
+            <i class="fa-solid fa-book-medical"></i>
+          </div>
+          <h3>End-to-End Medical Coding</h3>
+          <p>Comprehensive training across ICD-10-CM (Diagnoses), CPT-4 (Procedures), and HCPCS Level II (Supplies/Services) with official guidelines mastery.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-check"></i> Outpatient & Inpatient Coding</li>
+            <li><i class="fa-solid fa-check"></i> Modifiers & Evaluation/Management (E/M)</li>
+            <li><i class="fa-solid fa-check"></i> Medical Terminology & Anatomy review</li>
+          </ul>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card highlighted-card">
+          <div class="popular-ribbon">Core Pillar</div>
+          <div class="icon-box color-teal">
+            <i class="fa-solid fa-notes-medical"></i>
+          </div>
+          <h3>Live Chart Training</h3>
+          <p>Practice directly on de-identified, genuine hospital & clinic electronic health records (EHR/EMR), diagnosing edge cases and cross-validating codes.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-check"></i> Operative & Radiology reports</li>
+            <li><i class="fa-solid fa-check"></i> Emergency Department & Inpatient charts</li>
+            <li><i class="fa-solid fa-check"></i> 95%+ Accuracy benchmarking</li>
+          </ul>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="icon-box color-purple">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3>Web-Based Training Delivery</h3>
+          <p>Fully live, interactive digital classroom with screen sharing, breakout rooms for coding drills, digital coding encrypters, and 24/7 LMS access.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-check"></i> Zero software installation needed</li>
+            <li><i class="fa-solid fa-check"></i> Daily recorded session archives</li>
+            <li><i class="fa-solid fa-check"></i> Interactive live Q&A with instructors</li>
+          </ul>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="icon-box color-amber">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <h3>ATS-Compliant Resume Building</h3>
+          <p>Professional healthcare recruiters restructure your resume to highlight coding specialties, clinical terminology, and certification credentials.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-check"></i> Keyword optimization for top healthcare portals</li>
+            <li><i class="fa-solid fa-check"></i> 1-on-1 resume revamp sessions</li>
+            <li><i class="fa-solid fa-check"></i> LinkedIn profile transformation</li>
+          </ul>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="icon-box color-rose">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3>Interview Cracking Support</h3>
+          <p>Conquer technical coding test rounds and HR behavioral interviews with mock panel interviews and real corporate test question banks.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-check"></i> Timed coding speed tests & drills</li>
+            <li><i class="fa-solid fa-check"></i> Technical Q&A preparation guide</li>
+            <li><i class="fa-solid fa-check"></i> Behavioral & salary negotiation coaching</li>
+          </ul>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="icon-box color-green">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <h3>Placement in Top Organizations</h3>
+          <p>Direct interview pipeline with partner hospitals, Revenue Cycle Management (RCM) giants, global BPOs, and healthcare MNCs.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-check"></i> Dedicated placement manager support</li>
+            <li><i class="fa-solid fa-check"></i> Continuous interview opportunities</li>
+            <li><i class="fa-solid fa-check"></i> Offer letter evaluation assistance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Chart Simulator Spotlight -->
+  <section id="live-charts" class="section">
+    <div class="container">
+      <div class="chart-spotlight-wrapper">
+        <div class="chart-spotlight-text">
+          <span class="sub-badge">Hands-On Clinical Experience</span>
+          <h2>Experience Real Medical Coding Before Day 1 On the Job</h2>
+          <p>Companies don't just hire people who memorize codebooks — they hire professionals who know how to extract billable diagnoses and procedures from messy physician documentation.</p>
+          
+          <div class="chart-perks">
+            <div class="perk-item">
+              <div class="perk-num">01</div>
+              <div>
+                <h4>50+ Realistic Clinical Cases per Week</h4>
+                <p>Cardiology, Orthopedics, Oncology, GI, Emergency Room, and Multi-specialty clinical summaries.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <div class="perk-num">02</div>
+              <div>
+                <h4>Real-Time Coding Error Detection</h4>
+                <p>Get instant feedback on unbundling errors, missing secondary diagnoses, or incorrect modifier sequences.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <div class="perk-num">03</div>
+              <div>
+                <h4>EHR/EMR Workflow Simulation</h4>
+                <p>Train in software interfaces mirroring industry-standard systems used by major hospital networks.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Chart Interactive Preview Widget -->
+        <div class="chart-simulator-card">
+          <div class="sim-header">
+            <div class="sim-dots"><span></span><span></span><span></span></div>
+            <div class="sim-title"><i class="fa-solid fa-stethoscope"></i> Live Chart Auditor Preview #MC-4091</div>
+            <span class="sim-badge">Live Case</span>
+          </div>
+          <div class="sim-body">
+            <div class="patient-banner">
+              <div><strong>Patient:</strong> Adult Male (54)</div>
+              <div><strong>Encounter:</strong> Emergency Dept</div>
+              <div><strong>Status:</strong> Needs Coding Review</div>
+            </div>
+            <div class="chart-snippet">
+              <p class="chart-label">Physician Progress Note:</p>
+              <div class="note-box">
+                "Patient presented with acute retrosternal chest pain radiating to left arm. EKG showed ST elevation in anterior leads. Troponin I elevated at 2.4 ng/mL. Diagnosed with <strong>acute transmural myocardial infarction of anterior wall</strong>. Patient also has poorly controlled <strong>Type 2 diabetes mellitus with diabetic polyneuropathy</strong>."
+              </div>
+            </div>
+            <div class="sim-interactive-zone">
+              <p class="chart-label">Extracted Code Assignment Demonstration:</p>
+              <div class="code-pill-list">
+                <div class="code-pill">
+                  <span class="code-id">I21.09</span>
+                  <span class="code-desc">STEMI anterior wall</span>
+                  <i class="fa-solid fa-circle-check text-green"></i>
+                </div>
+                <div class="code-pill">
+                  <span class="code-id">E11.42</span>
+                  <span class="code-desc">Type 2 DM with polyneuropathy</span>
+                  <i class="fa-solid fa-circle-check text-green"></i>
+                </div>
+                <div class="code-pill">
+                  <span class="code-id">99285</span>
+                  <span class="code-desc">ED Visit High Complexity</span>
+                  <i class="fa-solid fa-circle-check text-green"></i>
+                </div>
+              </div>
+              <div class="sim-feedback">
+                <i class="fa-solid fa-shield-heart"></i>
+                <span>Codrxs Live Chart Accuracy Score: <strong>100% Audit Verified</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2-Week Structured Curriculum -->
+  <section id="curriculum" class="section bg-light">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="sub-badge">Action-Oriented Schedule</span>
+        <h2>Comprehensive 2-Week Web Training Roadmap</h2>
+        <p>14 high-intensity days structured specifically to take you from foundational concepts to interview-cracking confidence.</p>
+      </div>
+
+      <div class="curriculum-grid">
+        <!-- Week 1 -->
+        <div class="week-card">
+          <div class="week-header week-1">
+            <div class="week-badge">Week 1</div>
+            <h3>Core Coding Mastery & Live Clinical Charting</h3>
+            <span class="week-time"><i class="fa-solid fa-clock"></i> Days 1 to 7 (Web Interactive)</span>
+          </div>
+          <div class="week-body">
+            <div class="day-item">
+              <span class="day-num">Day 1-2</span>
+              <div class="day-detail">
+                <h4>Medical Science & ICD-10-CM Deep Dive</h4>
+                <p>Anatomy, clinical terminology, pathology, conventions, general coding guidelines, chapter-specific coding rules.</p>
+              </div>
+            </div>
+            <div class="day-item">
+              <span class="day-num">Day 3-4</span>
+              <div class="day-detail">
+                <h4>CPT-4 Procedure Coding & Modifiers</h4>
+                <p>Surgical packages, Evaluation & Management (E/M 2024 updates), Radiology, Pathology, and modifiers 25, 59, 76, 78.</p>
+              </div>
+            </div>
+            <div class="day-item">
+              <span class="day-num">Day 5</span>
+              <div class="day-detail">
+                <h4>HCPCS Level II & Compliance Regulations</h4>
+                <p>DMEPOS, injectable medications, supplies, HIPAA privacy, Fraud & Abuse prevention rules (OIG, CMS guidelines).</p>
+              </div>
+            </div>
+            <div class="day-item">
+              <span class="day-num">Day 6-7</span>
+              <div class="day-detail">
+                <h4>Intensive Live Chart Lab - Part 1</h4>
+                <p>Auditing real Outpatient Clinic & Ambulatory Surgery charts. Timed code generation & individual accuracy feedback.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week 2 -->
+        <div class="week-card">
+          <div class="week-header week-2">
+            <div class="week-badge">Week 2</div>
+            <h3>Advanced Audits, Resume Revamp & Placement Drills</h3>
+            <span class="week-time"><i class="fa-solid fa-clock"></i> Days 8 to 14 (Career Acceleration)</span>
+          </div>
+          <div class="week-body">
+            <div class="day-item">
+              <span class="day-num">Day 8-9</span>
+              <div class="day-detail">
+                <h4>Complex Inpatient & Multi-Specialty Live Charts</h4>
+                <p>ICD-10-PCS concepts, DRG assignment fundamentals, Cardiology & Orthopedic operative summaries coding.</p>
+              </div>
+            </div>
+            <div class="day-item">
+              <span class="day-num">Day 10</span>
+              <div class="day-detail">
+                <h4>1-on-1 ATS Resume & Portfolio Build</h4>
+                <p>Custom resume engineering tailored for medical coding job portals. Showcasing chart audit proficiency & accuracy scores.</p>
+              </div>
+            </div>
+            <div class="day-item">
+              <span class="day-num">Day 11-12</span>
+              <div class="day-detail">
+                <h4>Rigorous Mock Interviews & Technical Rounds</h4>
+                <p>Simulated technical screening tests, case vignette oral grilling, HR behavioral scenarios, and communication polish.</p>
+              </div>
+            </div>
+            <div class="day-item">
+              <span class="day-num">Day 13-14</span>
+              <div class="day-detail">
+                <h4>Organization Interviews & Placement Drives</h4>
+                <p>Direct scheduling with our partner healthcare providers, RCM consultancies, and MNC recruitment teams.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="curriculum-cta">
+        <div class="curriculum-cta-content">
+          <h4>Want the full syllabus with daily topic breakdowns & timing?</h4>
+          <p>Register your interest below and receive our complete training prospectus immediately.</p>
+        </div>
+        <a href="#register" class="btn btn-primary">Download Syllabus & Apply</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career & Placement Ecosystem -->
+  <section id="career-support" class="section">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="sub-badge">Guaranteed Career Trajectory</span>
+        <h2>Resume Support, Mock Interviews & Corporate Placement</h2>
+        <p>We don't finish our job until you secure an offer letter with a reputed healthcare organization.</p>
+      </div>
+
+      <div class="placement-steps-grid">
+        <div class="step-card">
+          <div class="step-icon"><i class="fa-solid fa-id-card-clip"></i></div>
+          <div class="step-badge">Step 1</div>
+          <h3>Custom Resume Build</h3>
+          <p>Our expert recruiters turn your experience and training into an ATS-optimized, keyword-rich medical coder profile that passes automated screener gates.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <div class="step-badge">Step 2</div>
+          <h3>Interview Cracking Drills</h3>
+          <p>Face 1-on-1 mock technical interviews. Practice scenario-based coding tests under pressure with actionable feedback from hiring managers.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="step-badge">Step 3</div>
+          <h3>Direct Corporate Referrals</h3>
+          <p>Your resume is sent directly to hiring managers at partner hospitals, medical billing agencies, and global healthcare outsourcing firms.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-icon"><i class="fa-solid fa-award"></i></div>
+          <div class="step-badge">Step 4</div>
+          <h3>Offer & Onboarding Support</h3>
+          <p>We guide you through salary negotiations, contract evaluation, and onboarding prerequisites for a smooth career transition.</p>
+        </div>
+      </div>
+
+      </div>
+  </section>
+
+  
+
+  <!-- Candidate Interest Registration Form Section -->
+  <section id="register" class="section registration-section">
+    <div class="container">
+      <div class="reg-wrapper">
+        <div class="reg-intro">
+          <span class="sub-badge" style="background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.3);">Enrollment Open</span>
+          <h2>Register Your Interest For The Next 2-Week Cohort</h2>
+          <p>Fill out the form to reserve your seat in our web-based training program. Our admissions & placement advisor will get in touch with curriculum materials, batch timings, and placement roadmap.</p>
+          
+          <div class="reg-benefits-list">
+            <div class="reg-benefit">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>Guaranteed Placement Assistance:</strong>
+                <span>Direct interview pipeline into partner organizations.</span>
+              </div>
+            </div>
+            <div class="reg-benefit">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>Complete Live Chart Practice:</strong>
+                <span>Work on 500+ genuine diagnostic clinical records.</span>
+              </div>
+            </div>
+            <div class="reg-benefit">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>Complimentary Resume & Mock Rounds:</strong>
+                <span>End-to-end interview preparation included.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="advisor-contact-box">
+            <div class="advisor-icon"><i class="fa-solid fa-headset"></i></div>
+            <div>
+              <strong>Have questions before applying?</strong>
+              <p>Email us: <a href="mailto:info@codrxs.com"><strong>info@codrxs.com</strong></a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Main Interactive Form -->
+        <div class="reg-form-container">
+          <div class="form-title-bar">
+            <h3>Candidate Interest & Profile Assessment</h3>
+            <p>Takes less than 2 minutes to complete</p>
+          </div>
+
+          <form id="candidateInterestForm" class="styled-form" novalidate>
+            <!-- Personal Info -->
+            <div class="form-row">
+              <div class="form-field">
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="fa-regular fa-user"></i>
+                  <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+                </div>
+                <span class="error-msg" id="fullNameError">Please enter your full name.</span>
+              </div>
+              <div class="form-field">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="fa-regular fa-envelope"></i>
+                  <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                </div>
+                <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="phone">Phone / WhatsApp Number <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-phone"></i>
+                  <input type="tel" id="phone" name="phone" placeholder="Your contact number" required>
+                </div>
+                <span class="error-msg" id="phoneError">Please enter your contact number.</span>
+              </div>
+              <div class="form-field">
+                <label for="city">City & State / Location <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <input type="text" id="city" name="city" placeholder="Enter your location" required>
+                </div>
+                <span class="error-msg" id="cityError">Please specify your location.</span>
+              </div>
+            </div>
+
+            <!-- Academic & Experience Background -->
+            <div class="form-row">
+              <div class="form-field">
+                <label for="education">Highest Qualification <span class="required">*</span></label>
+                <select id="education" name="education" required>
+                  <option value="">-- Select Your Educational Background --</option>
+                  <option value="life_sciences">Life Sciences (B.Sc / M.Sc Biology, Biotech, Zoology)</option>
+                  <option value="pharmacy">Pharmacy (B.Pharm / M.Pharm / Pharm.D)</option>
+                  <option value="nursing">Nursing / Physiotherapy / Allied Health</option>
+                  <option value="medical_graduate">MBBS / BDS / BAMS / BHMS</option>
+                  <option value="other_graduate">Other Graduate Degree (Any stream)</option>
+                  <option value="diploma">High School / Diploma</option>
+                </select>
+                <span class="error-msg" id="educationError">Please select your educational qualification.</span>
+              </div>
+              <div class="form-field">
+                <label for="experience">Current Experience Level <span class="required">*</span></label>
+                <select id="experience" name="experience" required>
+                  <option value="">-- Select Coding Experience --</option>
+                  <option value="fresher">Fresh Graduate (No Coding Experience)</option>
+                  <option value="career_switcher">Career Switcher from Non-Healthcare</option>
+                  <option value="healthcare_worker">Healthcare Worker looking to enter Medical Coding</option>
+                  <option value="experienced_coder">Experienced Coder looking for Certification / Fast Placement</option>
+                </select>
+                <span class="error-msg" id="experienceError">Please select your experience level.</span>
+              </div>
+            </div>
+
+            <!-- Training Preferences -->
+            <div class="form-field">
+              <label>Special Focus Areas of Interest (Check all that apply):</label>
+              <div class="checkbox-group">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="interests" value="icd_cpt" checked>
+                  <span class="checkbox-box"><i class="fa-solid fa-check"></i></span>
+                  <span class="checkbox-label">End-to-End ICD-10 & CPT-4 Mastery</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="interests" value="live_charts" checked>
+                  <span class="checkbox-box"><i class="fa-solid fa-check"></i></span>
+                  <span class="checkbox-label">Hands-On Live Chart Training</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="interests" value="resume_support" checked>
+                  <span class="checkbox-box"><i class="fa-solid fa-check"></i></span>
+                  <span class="checkbox-label">Professional ATS Resume Rebuild</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="interests" value="interview_support" checked>
+                  <span class="checkbox-box"><i class="fa-solid fa-check"></i></span>
+                  <span class="checkbox-label">Mock Interview & Test Cracking</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="interests" value="placement_support" checked>
+                  <span class="checkbox-box"><i class="fa-solid fa-check"></i></span>
+                  <span class="checkbox-label">Direct Corporate Placement Assistance</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="timeSlot">Preferred Web Training Timing <span class="required">*</span></label>
+                <select id="timeSlot" name="timeSlot" required>
+                  <option value="">-- Select Preferred Batch Slot --</option>
+                  <option value="morning">Morning Live Batch (8:00 AM - 11:00 AM)</option>
+                  <option value="evening">Evening Live Batch (6:00 PM - 9:00 PM)</option>
+                  <option value="afternoon">Afternoon Live Batch (2:00 PM - 5:00 PM)</option>
+                  <option value="weekend_fasttrack">Weekend Intensive Fast-Track</option>
+                </select>
+                <span class="error-msg" id="timeSlotError">Please choose a preferred training time slot.</span>
+              </div>
+              <div class="form-field">
+                <label for="startDate">Target Start Timeline <span class="required">*</span></label>
+                <select id="startDate" name="startDate" required>
+                  <option value="immediate">Immediate Upcoming Batch (Starts Next Monday)</option>
+                  <option value="next_batch">Within 2 to 3 Weeks</option>
+                  <option value="next_month">Next Month</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="comments">Specific Career Goals or Questions (Optional):</label>
+              <textarea id="comments" name="comments" rows="3" placeholder="Tell us about your career targets, questions regarding placement organizations, or any certification aspirations (CPC, CCS, etc.)..."></textarea>
+            </div>
+
+            <div class="terms-field">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="consentCheck" required checked>
+                <span class="checkbox-box"><i class="fa-solid fa-check"></i></span>
+                <span class="checkbox-label">I consent to receiving training details, batch schedule, and career placement guidelines via Email, WhatsApp, or Phone call.</span>
+              </label>
+              <span class="error-msg" id="consentError">Please accept the consent to submit your interest.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-submit" id="submitBtn">
+              <span>Submit Interest & Reserve 2-Week Cohort Seat</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+
+          <!-- Form Success Confirmation Modal / Banner -->
+          <div id="formSuccessMessage" class="form-success-banner" style="display: none;">
+            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="success-content">
+              <h3>Interest Submitted Successfully!</h3>
+              <p>Thank you, <strong id="submittedCandidateName">Candidate</strong>! We have registered your profile for the <strong>2-Week End-to-End Medical Coding Web Training</strong>.</p>
+              <div class="success-next-steps">
+                <h4>What happens next?</h4>
+                <ol>
+                  <li>Our Senior Placement & Admissions Advisor will contact you within <strong>2 business hours</strong>.</li>
+                  <li>You will receive your <strong>2-Week Detailed Syllabus</strong> and <strong>Sample Live Chart Pack</strong> via email.</li>
+                  <li>We will schedule your complimentary <strong>Resume Baseline Review</strong> and batch orientation link.</li>
+                </ol>
+              </div>
+              <div class="success-actions">
+                <button class="btn btn-secondary" onclick="resetInterestForm()">Submit Another Response</button>
+                <a href="#curriculum" class="btn btn-primary">Review Curriculum Again</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="sub-badge">Common Queries</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about the 2-week web training and placement model.</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can complete medical coding really be learned in a 2-week fast-track program?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Our 2-week program is an intensive, high-yield boot camp model designed by industry practitioners. Instead of months of passive textbook reading, you spend dedicated daily hours on practical live charts, core ICD-10 and CPT coding frameworks, and actual interview case scenarios. It is engineered specifically to make candidates interview-ready and job-competent swiftly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the web-based training model operate?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>The entire program is conducted online through interactive video classrooms and our cloud-based medical chart auditing software. You do not need to install complex local tools. You can interact live with instructors, ask questions, participate in coding breakout groups, and access recorded session replays at any time.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What kind of live chart training is provided?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>You will code hundreds of real-life de-identified hospital and clinic charts across multiple specialties, including Inpatient records, Emergency Room encounters, Outpatient clinics, and Surgical operative reports. Instructors audit your code selection and modifiers live to build industry-level accuracy.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does Codrxs help with resume building and interview cracking?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>During Week 2, our specialized healthcare recruitment team conducts 1-on-1 resume optimization to ensure your CV passes ATS software used by top hospitals and RCM companies. We then conduct multiple mock technical interview rounds with timed coding quizzes and oral case discussions so you walk into real interviews with complete confidence.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Which organizations do you place trained staff with?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We partner with leading Revenue Cycle Management (RCM) service providers, hospital networks, healthcare BPOs, insurance clearinghouses, and medical billing agencies. Our dedicated placement coordinators schedule interviews directly for qualified trainees until placement is achieved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="final-cta">
+    <div class="container text-center">
+      <h2>Ready to Start Your Career in Medical Coding?</h2>
+      <p>Seats for our upcoming 2-week web cohort are limited to ensure 1-on-1 attention for live chart audits and mock interviews.</p>
+      <div class="final-cta-btns">
+        <a href="#register" class="btn btn-primary btn-lg">Apply & Reserve Seat Now</a>
+        <a href="#" class="btn btn-outline-white btn-lg"><i class="fa-solid fa-phone"></i> Speak With an Advisor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <div class="brand-logo footer-logo">
+          <img src="logo.png" alt="Codrxs Logo" class="brand-logo-img footer-logo-img">
+        </div>
+        <p class="footer-desc">
+          Premier training academy for end-to-end medical coding, real clinical chart auditing, professional resume building, and placement into prestigious healthcare organizations.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Program Highlights</h4>
+        <ul class="footer-links">
+          <li><a href="#curriculum">2-Week Fast-Track Syllabus</a></li>
+          <li><a href="#live-charts">Live Clinical Chart Audits</a></li>
+          <li><a href="#features">Web Training Model</a></li>
+          <li><a href="#career-support">Resume Rebuilding Support</a></li>
+          <li><a href="#career-support">Mock Interview Cracking</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Placement & Careers</h4>
+        <ul class="footer-links">
+          <li><a href="#career-support">Partner Healthcare Organizations</a></li>
+          
+          <li><a href="#register">Register Candidate Interest</a></li>
+          <li><a href="mailto:info@codrxs.com">Employer Hiring Partnerships</a></li>
+          <li><a href="/login.html" style="font-size: 0.78rem; opacity: 0.5;"><i class="fa-solid fa-lock"></i> Staff Login</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Admissions</h4>
+        <p><i class="fa-solid fa-envelope"></i> info@codrxs.com</p>
+
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div style="display:flex; align-items:center; justify-content:center; padding: 28px 0; text-align:center;">
+          <p style="font-size:0.8rem; color:#475569; margin:0;">© 2026 Codrxs Coding Academy. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

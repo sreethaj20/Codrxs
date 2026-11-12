@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="logo.png?v=2">
+  <link rel="shortcut icon" href="logo.png?v=2">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codrxs Admin Portal | CRM Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background-color: #f1f5f9; }
+    .admin-wrapper { padding: 40px 0; }
+
+    /* ── Header ── */
+    .admin-header {
+      background: white;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* ── Stats ── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .stat-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+
+    /* ── Tabs ── */
+    .tab-nav {
+      display: flex;
+      gap: 4px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 6px;
+      margin-bottom: 20px;
+      width: fit-content;
+    }
+    .tab-btn {
+      padding: 10px 22px;
+      border-radius: var(--radius);
+      border: none;
+      background: transparent;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--gray);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .tab-btn:hover { background: #f1f5f9; color: var(--dark); }
+    .tab-btn.active {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── Tables ── */
+    .table-container {
+      background: white;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      overflow-x: auto;
+      box-shadow: var(--shadow-sm);
+    }
+    .candidate-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    .candidate-table th {
+      background: #f8fafc;
+      padding: 14px 18px;
+      font-weight: 700;
+      color: var(--gray-dark);
+      border-bottom: 2px solid var(--border);
+      white-space: nowrap;
+    }
+    .candidate-table td {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .candidate-table tr:last-child td { border-bottom: none; }
+    .candidate-table tr:hover { background-color: #f8fafc; }
+
+    /* ── Badges ── */
+    .badge-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      background: #d1fae5;
+      color: #065f46;
+    }
+    /* ── User pill ── */
+    .user-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #f8fafc;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+
+    /* ── Skeleton loader ── */
+    @keyframes shimmer {
+      0% { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
+    }
+    .skeleton-row td {
+      padding: 20px 18px;
+    }
+    .skeleton-cell {
+      height: 14px;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+      background-size: 400px 100%;
+      animation: shimmer 1.4s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="container admin-wrapper">
+
+    <!-- ── Header ── -->
+    <div class="admin-header">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+          <a href="/" style="color: var(--primary); font-weight: 700;"><i class="fa-solid fa-arrow-left"></i> View Public Site</a>
+          <span style="color: var(--gray);">|</span>
+          <span class="badge-tag"><i class="fa-solid fa-lock"></i> Secure Admin CRM</span>
+        </div>
+        <h1 style="font-size: 1.8rem; font-weight: 800;">Codrxs Admin Dashboard</h1>
+        <p style="color: var(--gray); font-size: 0.9rem;">Protected admissions & admin management for 2-Week Medical Coding Web Cohort</p>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+        <div class="user-pill">
+          <i class="fa-solid fa-circle-user text-green"></i>
+          <span id="currentUserName">Admin Staff</span>
+        </div>
+        <button class="btn btn-secondary" onclick="refreshCurrentTab()"><i class="fa-solid fa-rotate-right"></i> Refresh</button>
+        <button class="btn btn-primary" onclick="exportCSV()"><i class="fa-solid fa-download"></i> Export CSV</button>
+        <button class="btn btn-secondary" style="color: var(--danger);" onclick="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</button>
+      </div>
+    </div>
+
+    <!-- ── Stats Row ── -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-icon color-blue"><i class="fa-solid fa-users"></i></div>
+        <div>
+          <h3 id="totalCandidatesCount" style="font-size: 1.6rem; font-weight: 800;">0</h3>
+          <p style="color: var(--gray); font-size: 0.85rem;">Total Applications</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon color-teal"><i class="fa-solid fa-calendar-check"></i></div>
+        <div>
+          <h3 id="nextBatchCount" style="font-size: 1.6rem; font-weight: 800;">0</h3>
+          <p style="color: var(--gray); font-size: 0.85rem;">Immediate Batch Leads</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon color-green"><i class="fa-solid fa-briefcase"></i></div>
+        <div>
+          <h3 style="font-size: 1.6rem; font-weight: 800;">100%</h3>
+          <p style="color: var(--gray); font-size: 0.85rem;">Placement Assistance</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Candidates Table -->
+    <div id="panel-candidates">
+      <div class="table-container">
+        <table class="candidate-table">
+          <thead>
+            <tr>
+              <th>Application ID</th>
+              <th>Candidate Name</th>
+              <th>Contact Info</th>
+              <th>City</th>
+              <th>Qualification</th>
+              <th>Experience</th>
+              <th>Preferred Slot</th>
+              <th>Submitted On</th>
+            </tr>
+          </thead>
+          <tbody id="candidatesTableBody">
+            <tr class="skeleton-row">
+              <td><div class="skeleton-cell" style="width:90px"></div></td>
+              <td><div class="skeleton-cell" style="width:120px"></div></td>
+              <td><div class="skeleton-cell" style="width:140px"></div></td>
+              <td><div class="skeleton-cell" style="width:70px"></div></td>
+              <td><div class="skeleton-cell" style="width:80px"></div></td>
+              <td><div class="skeleton-cell" style="width:60px"></div></td>
+              <td><div class="skeleton-cell" style="width:80px"></div></td>
+              <td><div class="skeleton-cell" style="width:100px"></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+  </div><!-- /admin-wrapper -->
+
+  <script>
+    // ── Auth check ──────────────────────────────────
+    const token = localStorage.getItem('codrxs_admin_token');
+    const storedUser = localStorage.getItem('codrxs_admin_user');
+
+    if (!token) {
+      window.location.replace('/login.html');
+    }
+
+    if (storedUser) {
+      const userEl = document.getElementById('currentUserName');
+      if (userEl) userEl.textContent = storedUser;
+    }
+
+    function refreshCurrentTab() { loadCandidates(); }
+
+    // ── Helpers ─────────────────────────────────────
+    function formatLabel(str) {
+      if (!str) return '-';
+      return str.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    }
+
+    function handleUnauthorized() {
+      logout();
+    }
+
+    // ── Load Candidates ─────────────────────────────
+    async function loadCandidates() {
+      const tbody = document.getElementById('candidatesTableBody');
+      tbody.innerHTML = `<tr class="skeleton-row">
+        <td><div class="skeleton-cell" style="width:90px"></div></td>
+        <td><div class="skeleton-cell" style="width:120px"></div></td>
+        <td><div class="skeleton-cell" style="width:140px"></div></td>
+        <td><div class="skeleton-cell" style="width:70px"></div></td>
+        <td><div class="skeleton-cell" style="width:80px"></div></td>
+        <td><div class="skeleton-cell" style="width:60px"></div></td>
+        <td><div class="skeleton-cell" style="width:80px"></div></td>
+        <td><div class="skeleton-cell" style="width:100px"></div></td>
+      </tr>`;
+
+      try {
+        const res = await fetch('/api/candidates', {
+          headers: { 'Authorization': 'Bearer ' + token }
+        });
+
+        if (res.status === 401 || res.status === 403) { handleUnauthorized(); return; }
+
+        const data = await res.json();
+
+        if (data.success && data.candidates) {
+          document.getElementById('totalCandidatesCount').textContent = data.count;
+          const immediate = data.candidates.filter(c => c.startDate === 'immediate').length;
+          document.getElementById('nextBatchCount').textContent = immediate;
+
+          if (data.candidates.length === 0) {
+            tbody.innerHTML = `
+              <tr>
+                <td colspan="8" style="text-align:center;padding:50px;color:var(--gray);">
+                  <i class="fa-solid fa-folder-open" style="font-size:2rem;margin-bottom:10px;color:#cbd5e1;display:block;"></i>
+                  <h4>No candidate applications yet</h4>
+                  <p>Submissions from the public registration form will appear here automatically.</p>
+                </td>
+              </tr>`;
+            return;
+          }
+
+          tbody.innerHTML = data.candidates.map(c => `
+            <tr>
+              <td><strong style="color:var(--primary);font-family:monospace;">${c.id}</strong></td>
+              <td>
+                <div style="font-weight:700;color:var(--dark);">${c.fullName}</div>
+                <div style="font-size:0.78rem;color:var(--gray);">${(c.interests||[]).join(', ')}</div>
+              </td>
+              <td>
+                <div><i class="fa-regular fa-envelope" style="color:var(--gray);"></i> ${c.email}</div>
+                <div><i class="fa-solid fa-phone" style="color:var(--gray);"></i> ${c.phone}</div>
+              </td>
+              <td>${c.city}</td>
+              <td><span class="badge-tag">${formatLabel(c.education)}</span></td>
+              <td>${formatLabel(c.experience)}</td>
+              <td><strong style="color:var(--primary-deep);">${formatLabel(c.timeSlot)}</strong></td>
+              <td style="font-size:0.8rem;color:var(--gray);">${new Date(c.createdAt).toLocaleString()}</td>
+            </tr>
+          `).join('');
+        }
+      } catch (err) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="8" style="text-align:center;color:var(--danger);padding:30px;">
+              <i class="fa-solid fa-triangle-exclamation" style="margin-right:8px;"></i>
+              Failed to connect to backend. Make sure the Node server is running.
+            </td>
+          </tr>`;
+      }
+    }
+
+    // ── Export CSV ──────────────────────────────────
+    async function exportCSV() {
+      try {
+        const res = await fetch('/api/candidates/export', {
+          headers: { 'Authorization': 'Bearer ' + token }
+        });
+        if (res.status === 401) { logout(); return; }
+        const blob = await res.blob();
+        const urlObj = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = urlObj;
+        a.download = `Codrxs_Candidates_${Date.now()}.csv`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        window.URL.revokeObjectURL(urlObj);
+      } catch (e) {
+        alert('Export failed. Please check connection.');
+      }
+    }
+
+    // ── Logout ──────────────────────────────────────
+    function logout() {
+      localStorage.removeItem('codrxs_admin_token');
+      localStorage.removeItem('codrxs_admin_user');
+      window.location.replace('/login.html');
+    }
+
+    // ── Init ────────────────────────────────────────
+    loadCandidates();
+  </script>
+</body>
+</html>
