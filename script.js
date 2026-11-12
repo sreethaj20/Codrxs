@@ -232,3 +232,26 @@ function resetInterestForm() {
     form.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
+
+// -- Reviews drag-to-scroll ------------------------------
+const reviewsGrid = document.querySelector('.reviews-grid');
+if (reviewsGrid) {
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  reviewsGrid.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - reviewsGrid.offsetLeft;
+    scrollLeft = reviewsGrid.scrollLeft;
+  });
+  reviewsGrid.addEventListener('mouseleave', () => { isDown = false; });
+  reviewsGrid.addEventListener('mouseup', () => { isDown = false; });
+  reviewsGrid.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - reviewsGrid.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    reviewsGrid.scrollLeft = scrollLeft - walk;
+  });
+}
